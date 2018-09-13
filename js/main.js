@@ -169,7 +169,7 @@ createRestaurantHTML = (restaurant) => {
   const more = document.createElement('div');
   more.classList.add("res-details")
   more.innerHTML = `<a href="` + DBHelper.urlForRestaurant(restaurant) +
-    `" tabIndex="`+myTabIndex+`">View Details</a>`;
+    `" tabIndex="`+myTabIndex+`" aria-role="button">View Details</a>`;
   myTabIndex++;
   restaurantTextArea.append(more)
   return restaurantItem
@@ -192,10 +192,10 @@ addMarkersToMap = (restaurants = self.restaurants) => {
 /**
  * Register a service worker from sw.js
  */
-if (navigator.serviceWorker) {
-  navigator.serviceWorker.register('/sw.js').then(function (reg) {
-    console.log('SW REGISTERED')
+/* if (navigator.serviceWorker) {
+  navigator.serviceWorker.register('/sw.js', {scope: "/"}).then(function (reg) {
+    console.log('SW REGISTERED'+reg.scope)
   }).catch(function (err) {
-    console.log("SW ERROR!!");
+    console.log("SW ERROR!!"+err);
   });
-}
+} */

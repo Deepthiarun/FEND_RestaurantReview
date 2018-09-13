@@ -1,49 +1,49 @@
 <!DOCTYPE html>
 <html lang="en-us">
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Restaurant, review, map">
-  <link rel="stylesheet" src="//normalize-css.googlecode.com/svn/trunk/normalize.css" />
-  <link rel="stylesheet" href="css/styles-main.css">
-  <title>D's Restaurant Reviews</title>
-</head>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Restaurant, review, map">
+    <link rel="stylesheet" src="//normalize-css.googlecode.com/svn/trunk/normalize.css" />
+    <link rel="stylesheet" href="css/styles-main.css">
+    <title>D's Restaurant Reviews</title>
+  </head>
 
-<body>
-  <header>
-    <nav>
-            <h1 tabindex="1" >Restaurant Reviews</h1>
-    </nav>
-  </header>
+  <body>
+    <header>
+      <nav>
+              <h1 tabindex="1" >Restaurant Reviews</h1>
+      </nav>
+    </header>
 
-  <main id="maincontent">
-    <section id="map-container">
-      <div id="map" tabindex="2" aria-label="location"></div>
-    </section>
-    <section id="restaurants-container">
-      <div class="filter-options">
-        <h2>Filter Results</h2>
-        <select id="neighborhoods-select" name="neighborhoods" tabindex="3" onchange="updateRestaurants()">
-          <option value="all">All Neighborhoods</option>
-        </select>
-        <select id="cuisines-select" name="cuisines" tabindex="4" onchange="updateRestaurants()">
-          <option value="all">All Cuisines</option>
-        </select>
-      </div>
-      <div id="restaurants-list"><div>
-    </section>
-  </main>
+    <main id="maincontent">
+      <section id="map-container">
+        <div id="map" tabindex="2" aria-label="location" alt="Google Map of NY Area"></div>
+      </section>
+      <section id="restaurants-container">
+        <div class="filter-options">
+          <h2>Filter Results</h2>
+          <select id="neighborhoods-select" name="neighborhoods" tabindex="3" onchange="updateRestaurants()">
+            <option value="all">All Neighborhoods</option>
+          </select>
+          <select id="cuisines-select" name="cuisines" tabindex="4" onchange="updateRestaurants()">
+            <option value="all">All Cuisines</option>
+          </select>
+        </div>
+        <div id="restaurants-list"><div>
+      </section>
+    </main>
 
-  <script src="js/dbhelper.js"></script>
-  <script src="js/main.js"></script>
-  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCSDtPE4vebEJTAx1B_97lp5FBIUvFltEs&libraries=places&callback=initMap"></script>
+    <script src="js/dbhelper.js"></script>
+    <script src="js/main.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCSDtPE4vebEJTAx1B_97lp5FBIUvFltEs&libraries=places&callback=initMap"></script>
+    <script src="js/sw-register.js"></script>
 
+    <footer id="footer" tabindex="99">
+      Copyright (c) 2017 <a href="index.html"><strong>Restaurant Reviews</strong></a> All Rights Reserved.
+    </footer>
 
-  <footer id="footer" tabindex="99">
-    Copyright (c) 2017 <a href="index.html"><strong>Restaurant Reviews</strong></a> All Rights Reserved.
-  </footer>
-
-</body>
+  </body>
 
 </html>

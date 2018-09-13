@@ -22,7 +22,7 @@
     <nav>
     <!-- Beginning breadcrumb -->
       <ul id="breadcrumb" >
-        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html" tabindex="1">Home</a></li>
       </ul>
     <!-- End breadcrumb -->
     </nav>
@@ -31,7 +31,7 @@
     <!-- Beginning main -->
     <main id="maincontent">
       <!-- Beginning restaurant -->
-      <section id="restaurant-container" tabindex="1">
+      <section id="restaurant-container">
         <h1 id="restaurant-name"></h1>
         <div id="restaurant-img-container">
           <img id="restaurant-img">
@@ -46,7 +46,7 @@
           </section>
           <!-- Beginning map -->
           <section id="map-container">
-              <div id="map" aria-label="location"></div>
+              <div id="map" aria-label="location" alt="Google Map of NY Area"></div>
           </section>
         </div>
       </section>
@@ -61,7 +61,7 @@
     <!-- End main -->
 
     <!-- Beginning footer -->
-    <footer id="footer">
+    <footer id="footer" tabindex="99">   <!-- to make it the last in Tab order -->
       Copyright (c) 2017 <a href="/"><strong>Restaurant Reviews</strong></a> All Rights Reserved.
     </footer>
     <!-- End footer -->

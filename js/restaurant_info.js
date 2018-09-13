@@ -1,5 +1,6 @@
 let restaurant;
 var map;
+var myTabIndex = 10;
 
 /**
  * Initialize Google map, called from HTML.
@@ -40,6 +41,7 @@ fetchRestaurantFromURL = (callback) => {
         return;
       }
       fillRestaurantHTML();
+      myTabIndex = 10;
       callback(null, restaurant)
     });
   }
@@ -98,6 +100,7 @@ fillReviewsHTML = (reviews = self.restaurant.reviews) => {
   const container = document.getElementById('reviews-container');
   const title = document.createElement('h2');
   title.innerHTML = 'Reviews';
+  title.tabIndex = "10";
   container.appendChild(title);
 
   if (!reviews) {
@@ -118,6 +121,8 @@ fillReviewsHTML = (reviews = self.restaurant.reviews) => {
  */
 createReviewHTML = (review) => {
   const li = document.createElement('li');
+  myTabIndex++;
+  li.tabIndex = myTabIndex;
   const name = document.createElement('p');
   name.innerHTML = review.name;
   li.appendChild(name);
@@ -133,7 +138,6 @@ createReviewHTML = (review) => {
   const comments = document.createElement('p');
   comments.innerHTML = review.comments;
   li.appendChild(comments);
-
   return li;
 }
 

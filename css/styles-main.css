@@ -221,15 +221,21 @@ nav h1 a {
 /* ==================================== ====================== */
 /* ====================== Media Queries ====================== */
 
-@media 	screen and (min-width: 640px) {
+@media 	screen and (min-width: 520px) {
   .restaurant{
-    max-width: 310px;
+    max-width: 48%; /* 2 Col layout. 5+5 px margin for each rest*/
+  }
+}
+
+@media 	screen and (min-width: 800px) {
+  .restaurant{
+    max-width: 30%; /*3 Col layout.  5+5 px margin for each rest*/
   }
 }
 
 @media 	screen and (min-width: 1020px) {
   .restaurant{
-    max-width: 330px;
+    max-width: 30%;
   }
   nav {
     min-height: 100px;
